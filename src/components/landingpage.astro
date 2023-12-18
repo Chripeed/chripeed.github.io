@@ -1,0 +1,41 @@
+---
+import auto from "/auto_sisu.jpg?url";
+import dekoratsioon from "/ruum.jpg?url";
+---
+
+<div
+  class="flex flex-wrap h-screen font-Harietta font-bold text-luxurious-gold"
+>
+  <a
+    href="/autorent"
+    class="w-full h-1/2 md:w-1/2 md:h-full flex justify-center items-center relative group"
+  >
+    <img
+      src={auto}
+      alt="auto"
+      class="absolute top-0 left-0 w-full h-full object-cover"
+    />
+    <div
+      class="absolute inset-0 bg-deep-black bg-opacity-0 group-hover:bg-opacity-50 transition duration-300"
+    >
+    </div>
+    <span class="z-10 text-gold text-2xl md:text-4xl relative">AUTORENT</span>
+  </a>
+  <a
+    href="/dekoratsioonid"
+    class="w-full h-1/2 md:w-1/2 md:h-full flex justify-center items-center relative group"
+  >
+    <img
+      src={dekoratsioon}
+      alt="dekoratsioon"
+      class="absolute top-0 left-0 w-full h-full object-cover"
+    />
+    <div
+      class="absolute inset-0 bg-deep-black bg-opacity-0 group-hover:bg-opacity-50 transition duration-300"
+    >
+    </div>
+    <span class="z-10 text-gold text-2xl md:text-4xl relative"
+      >DEKORATSIOONID</span
+    >
+  </a>
+</div>

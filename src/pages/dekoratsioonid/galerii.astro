@@ -1,0 +1,13 @@
+---
+import MainLayoutNavbar from "../../layouts/navbar_dekoratsioonid_layout.astro";
+import ImageSlider from "../../components/DekoImageSlider";
+---
+
+<MainLayoutNavbar>
+  <div class="flex items-center justify-center mx-12 mt-12">
+    <hr class="flex-1 h-1 bg-charcoal-gray border-0 rounded my-4 md:my-2" />
+    <h1 class="mx-4 font-Florentino font-bold text-center text-3xl">GALERII</h1>
+    <hr class="flex-1 h-1 bg-charcoal-gray border-0 rounded my-4 md:my-2" />
+  </div>
+  <ImageSlider client:load />
+</MainLayoutNavbar>

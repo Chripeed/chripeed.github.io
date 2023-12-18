@@ -1,0 +1,27 @@
+---
+import Navbar from "../components/Navbar";
+import FooterAutorent from "./footer_autorent.astro";
+---
+
+<html lang="et">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Pulmateenuste pakkumine." />
+    <meta title="WedLux" />
+    <link rel="stylesheet" href="/styles/fonts.css" />
+  </head>
+  <body class="bg-soft-white">
+    <main>
+      <Navbar
+        switchToText="DEKORATSIOONID"
+        switchToHref="/dekoratsioonid"
+        currentHref="/autorent"
+        client:load
+      />
+      <slot />
+      <!-- All the different pages to be rendered here -->
+    </main>
+  </body>
+  <FooterAutorent />
+</html>

@@ -1,0 +1,121 @@
+---
+import MainLayoutNavbar from "../../layouts/navbar_dekoratsioonid_layout.astro";
+---
+
+<MainLayoutNavbar>
+  <div class="flex items-center justify-center mx-12 mt-12">
+    <hr class="flex-grow h-1 bg-charcoal-gray border-0 rounded my-4 md:my-2" />
+    <h1 class="mx-4 font-Florentino font-bold text-center text-3xl">KONTAKT</h1>
+    <hr class="flex-grow h-1 bg-charcoal-gray border-0 rounded my-4 md:my-2" />
+  </div>
+
+  <div
+    class="mx-12 my-6 grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center"
+  >
+    <div class="space-y-6 font-Florentino">
+      <p>
+        Otsid erakordseid sündmuste ja dekoratsiooniteenuseid? Võta meiega <b
+          >täna</b
+        >
+         ühendust ja lase meie kogenud meeskonnal muuta Sinu visioon
+        reaalsuseks. Olgu tegemist pulma, ettevõtte ürituse või erilise
+        tähistamisega, pakume laia valikut kohandatavaid võimalusi, mis vastavad
+        Sinu vajadustele. Alates suurepärastest dekoratsioonilahendustest kuni
+        isikupäraste kujundusteni – me oleme siin, et muuta Sinu sündmus
+        tõeliselt meeldejäävaks. Ära kõhkle meiega ühendust võtta ja uurida
+        võimalusi oma järgmiseks ürituseks. Võta meiega kohe ühendust ja hakkame
+        koos planeerima!
+      </p>
+      <p>
+        Sündmuste ja pulmade dekoratsiooniteenused terves Eestis. WedLuxis
+        püüame tagada, et Sinu kogemus oleks lihtne ja muretu.
+      </p>
+      <h2 class="text-2xl font-bold">Meie meeskond</h2>
+      <p>
+        WedLuxis pakume mitmesuguseid pulmade dekoratsiooniteenuseid, et muuta
+        Sinu eriline päev unustamatuks. Meie ekspert kujundajad on
+        spetsialiseerunud lilleseadetele, kesklõikudele, lauaseadistele,
+        taustadele jne. Pakume ka pulmade renti, ürituste mööblit ja lava
+        kujundust, et luua ainulaadne pulma elamus.
+      </p>
+    </div>
+
+    <div class="w-full md:w-2/3 px-4 font-Florentino font-bold">
+      <div class="bg-soft-white p-8 shadow rounded-lg">
+        <form action="/submit-form" method="post" class="space-y-4">
+          <div>
+            <label for="name" class="block text-sm font-medium text-onyx-black"
+              >Your Name (required)</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="mt-1 block w-full px-3 py-2 border border-onyx-black rounded-md shadow-sm focus:ring focus:ring-opacity-50"
+            />
+          </div>
+          <div>
+            <label for="phone" class="block text-sm font-medium text-onyx-black"
+              >Phone</label
+            >
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              class="mt-1 block w-full px-3 py-2 border border-onyx-black rounded-md shadow-sm focus:ring focus:ring-opacity-50"
+            />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-onyx-black"
+              >Email (required)</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="mt-1 block w-full px-3 py-2 border border-onyx-black rounded-md shadow-sm focus:ring focus:ring-opacity-50"
+            />
+          </div>
+          <div>
+            <label
+              for="subject"
+              class="block text-sm font-medium text-onyx-black"
+              >Subject (required)</label
+            >
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              required
+              class="mt-1 block w-full px-3 py-2 border border-onyx-black rounded-md shadow-sm focus:ring focus:ring-opacity-50"
+            />
+          </div>
+          <div>
+            <label
+              for="message"
+              class="block text-sm font-medium text-onyx-black"
+              >Message (required)</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              required
+              rows="4"
+              class="mt-1 block w-full px-3 py-2 border border-onyx-black rounded-md shadow-sm focus:ring focus:ring-opacity-50"
+            ></textarea>
+          </div>
+          <div>
+            <button
+              type="submit"
+              class="inline-flex justify-center w-full px-4 py-2 text-pure-white bg-charcoal-gray rounded-md hover:bg-onyx-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"
+            >
+              SEND
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</MainLayoutNavbar>

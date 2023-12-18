@@ -1,0 +1,79 @@
+---
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
+const companyInfo = {
+  name: "WEDLUX OÜ",
+  registerNumber: "1234567",
+  address: "Tuule 27, Saku, Harju maakond, 75501",
+  email: "mklilleseadmed@gmail.com",
+  phone: "+1234567890",
+};
+const links = ["Teenused", "Galerii", "Kontakt", "Renditingimused"];
+---
+
+<footer class="bg-charcoal-gray text-soft-white px-4 py-8 mt-32">
+  <div
+    class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+  >
+    <!-- Company Info -->
+    <div>
+      <h2 class="text-lg font-bold">{companyInfo.name}</h2>
+      <p class="text-steel-gray">Registrikood: {companyInfo.registerNumber}</p>
+      <p class="text-steel-gray">Aadress: {companyInfo.address}</p>
+      <p class="text-steel-gray">
+        E-posti aadress: <a href={`mailto:${companyInfo.email}`}
+          >{companyInfo.email}</a
+        >
+      </p>
+      <p class="text-steel-gray">
+        Telefon: <a href={`tel:${companyInfo.phone}`}>{companyInfo.phone}</a>
+      </p>
+    </div>
+
+    <!-- Navigation Links -->
+    <div>
+      <h2 class="text-lg font-bold">INFO</h2>
+      <ul>
+        {
+          links.map((link) => (
+            <li key={link}>
+              <a
+                href={`/dekoratsioonid/${link.toLowerCase()}`}
+                class="hover:text-blue-500 transition-colors duration-300 text-steel-gray"
+              >
+                {link.charAt(0).toUpperCase() + link.slice(1)}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <!-- Social Media Links -->
+    <div>
+      <h2 class="text-lg font-bold">Jälgi meid</h2>
+      <div class="flex mt-4">
+        <a
+          href="https://www.facebook.com/people/WedLux/100093962121919/?locale=et_EE"
+          class="text-blue hover:text-steel-gray transition-colors duration-300"
+        >
+          <FaFacebookF size="2em" />
+        </a>
+        <a
+          href="https://www.instagram.com/meritk_k/"
+          class="ml-4 text-pink hover:text-steel-gray"
+        >
+          <FaInstagram size="2em" />
+        </a>
+      </div>
+    </div>
+
+    <!-- Additional Info -->
+    <div>
+      <h2 class="text-lg font-bold">Rent</h2>
+      <p class="text-steel-gray">
+        Ilusad ja uhked autod Teie eriliseks päevaks.
+      </p>
+      <p class="text-steel-gray">Ainulaadsed ja isikupärased dekoratsioonid.</p>
+    </div>
+  </div>
+</footer>
