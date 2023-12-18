@@ -1,11 +1,22 @@
 ---
 import AutorentNavbar from "../layouts/navbar_autorent_layout.astro";
 import bg from "/Galerii/Auto/galerii4.jpg?url";
+import bg2 from "/Galerii/Auto/galerii6.jpg?url";
 ---
 
 <style>
   .clip-path {
     clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
+  }
+
+  .clip-path-reverse {
+    clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  @media (min-width: 768px) {
+    .clip-path-reverse {
+      clip-path: polygon(0 7.5%, 100% 0, 100% 100%, 0 100%);
+    }
   }
 </style>
 
@@ -17,18 +28,50 @@ import bg from "/Galerii/Auto/galerii4.jpg?url";
     >
       <div>
         <h1
-          class="text-pure-white font-Florentino text-center font-bold text-4xl mx-4 my-4"
+          class="text-pure-white font-Florentino text-center font-bold text-4xl mx-4 my-4 mt-16"
         >
-          RENDI UNISTUSTE AUTO
+          Rendi luksuslik Mercedes-Benz
         </h1>
       </div>
     </div>
-    <div class="font-Florentino mt-12">
-      <h2 class="font-bold text-2xl text-center">Pulmaautode rentimine</h2>
-      <p class="text-xl mt-4 mx-4 my-4">
-        Meie WedLuxis teeme kõik endast oleneva, et muuta teie pulmad
-        eksklusiivse pulmaauto rentimisega unustamatuks kogemuseks.
-      </p>
+
+    <div class="flex md:flex-row w-full md:h-[24rem]">
+      <!-- Text Content -->
+      <div class="flex-1 flex items-start md:justify-center p-8 mt-4">
+        <div class="font-Florentino text-onyx-black max-w-lg mx-auto md:mx-0">
+          <h2 class="font-bold text-2xl text-center md:text-left">
+            Pulmaautode rentimine
+          </h2>
+          <div class="mt-8 text-lg font-SortsMillGoudy max-w-lg">
+            <p class="mb-4">
+              Meie WedLuxis teeme kõik endast oleneva, et muuta teie pulmad
+              eksklusiivse pulmaauto rentimisega unustamatuks kogemuseks.
+            </p>
+            <p class="mb-4">
+              Pakume oma teenuseid terve Eesti piires ja täpse hinnapakkumise
+              teeme teile, kui oleme pulmasõiduga seotud üksikasjad läbi
+              arutanud.
+            </p>
+            <p>
+              Lähemalt tutvuge meie <a
+                href="/autorent/hinnakiri"
+                class="text-deep-black font-black">hinnakirjaga</a
+              > ja võtke meiega <a
+                href="/autorent/kontakt"
+                class="text-deep-black
+              font-black">ühendust</a
+              >.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div
+        class="flex-1 bg-cover bg-center bg-no-repeat clip-path-reverse"
+        style={{ backgroundImage: `url(${bg2})` }}
+      >
+      </div>
     </div>
   </div>
 </AutorentNavbar>

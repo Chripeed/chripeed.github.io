@@ -29,6 +29,7 @@ export default {
 		fontFamily:{
 			'Harietta':['"harietta"', 'sans-serif'],
 			'Florentino':['"florentino"', 'sans-serif'],
+			'SortsMillGoudy':['"sortsMillGoudy"', 'serif'],
 		},
 		extend: {},
 	},

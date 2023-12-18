@@ -27,9 +27,9 @@ export default function Navbar({
           </a>
           <a
             className="hover:text-steel-gray transition ease-out duration-500"
-            href={`${currentHref}/teenused`}
+            href={`${currentHref}/hinnakiri`}
           >
-            TEENUSED
+            HINNAKIRI
           </a>
 
           <h1 className="text-2xl font-bold text-luxurious-gold ">
@@ -100,7 +100,7 @@ export default function Navbar({
           <div className="flex flex-col gap-12 text-lg text-metallic-silver text-center font-Florentino">
             {[
               `${switchToHref}`,
-              `${currentHref}/teenused`,
+              `${currentHref}/hinnakiri`,
               `${currentHref}/galerii`,
               `${currentHref}/kontakt`,
             ].map((link, index) => (
