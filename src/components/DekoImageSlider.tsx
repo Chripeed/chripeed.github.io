@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
-import { RxDotFilled } from "react-icons/rx";
 import deko1 from "/Galerii/Dekoratsioonid/deko1.jpg?url";
 import deko2 from "/Galerii/Dekoratsioonid/deko2.jpg?url";
 import deko3 from "/Galerii/Dekoratsioonid/deko3.jpg?url";

@@ -7,12 +7,12 @@ export default function Navbar({
   currentHref = "/autorent",
 }) {
   const [toggled, setToggled] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
+  /*const [isMounted, setIsMounted] = useState(false);*/
   const matches = useMediaQuery("(min-width: 960px)");
 
-  useEffect(() => {
+  /*useEffect(() => {
     setIsMounted(true);
-  }, []);
+  }, []);*/
 
   return (
     <nav className="bg-soft-white shadow-md font-Harietta relative flex justify-center items-center pt-6 pb-6 font-medium">

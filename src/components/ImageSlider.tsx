@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
-import { RxDotFilled } from "react-icons/rx";
 import car1 from "/Galerii/Auto/galerii1.jpg?url";
 import car2 from "/Galerii/Auto/galerii2.jpg?url";
 import car3 from "/Galerii/Auto/galerii3.jpg?url";
