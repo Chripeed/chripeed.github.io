@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import car1 from "/Galerii/Auto/galerii1.jpg?url";
 import car2 from "/Galerii/Auto/galerii2.jpg?url";
@@ -39,8 +39,21 @@ function ImageSlider() {
     setCurrentIndex(newIndex);
   };
 
+  const previewContainerRef = useRef(null);
+
   const goToSlide = (slideIndex) => {
     setCurrentIndex(slideIndex);
+
+    const imageEl = previewContainerRef.current.childNodes[slideIndex];
+
+    // Calculate the scroll position
+    const scrollPosition =
+      imageEl.offsetLeft -
+      previewContainerRef.current.offsetWidth / 2 +
+      imageEl.offsetWidth / 2;
+
+    // Scroll the container
+    previewContainerRef.current.scrollLeft = scrollPosition;
   };
 
   return (
@@ -58,7 +71,7 @@ function ImageSlider() {
       <div className="md:hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-deep-black/80 text-pure-white cursor-pointer">
         <BsChevronCompactRight onClick={nextSlide} size={30} />
       </div>
-      <div className="flex top-4 justify-center py-2">
+      <div ref={previewContainerRef} className="flex overflow-x-auto py-2">
         {slides.map((slide, slideIndex) => (
           <img
             key={slideIndex}
