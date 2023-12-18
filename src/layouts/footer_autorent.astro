@@ -1,4 +1,5 @@
 ---
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 const companyInfo = {
   name: "WEDLUX OÜ",
   registerNumber: "1234567",
@@ -55,24 +56,26 @@ const links = ["Teenused", "Galerii", "Kontakt", "Renditingimused"];
           href="https://www.facebook.com/people/WedLux/100093962121919/?locale=et_EE"
           class="text-blue hover:text-steel-gray transition-colors duration-300"
         >
-          <p>Facebook</p>
+          <FaFacebookF size="2em" />
+          <a
+            href="https://www.instagram.com/meritk_k/"
+            class="ml-4 text-pink hover:text-steel-gray"
+          >
+            <FaInstagram size="2em" />
+          </a>
         </a>
-        <a
-          href="https://www.instagram.com/meritk_k/"
-          class="ml-4 text-pink hover:text-steel-gray"
-        >
-          <p>Instagram</p>
-        </a>
-      </div>
-    </div>
 
-    <!-- Additional Info -->
-    <div>
-      <h2 class="text-lg font-bold">Rent</h2>
-      <p class="text-steel-gray">
-        Ilusad ja uhked autod Teie eriliseks päevaks.
-      </p>
-      <p class="text-steel-gray">Ainulaadsed ja isikupärased dekoratsioonid.</p>
+        <!-- Additional Info -->
+        <div>
+          <h2 class="text-lg font-bold">Rent</h2>
+          <p class="text-steel-gray">
+            Ilusad ja uhked autod Teie eriliseks päevaks.
+          </p>
+          <p class="text-steel-gray">
+            Ainulaadsed ja isikupärased dekoratsioonid.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
