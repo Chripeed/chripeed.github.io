@@ -7,7 +7,7 @@ const companyInfo = {
   email: "mklilleseadmed@gmail.com",
   phone: "+1234567890",
 };
-const links = ["Teenused", "Galerii", "Kontakt", "Renditingimused"];
+const links = ["Hinnakiri", "Galerii", "Kontakt"];
 ---
 
 <footer class="bg-charcoal-gray text-soft-white px-4 py-8 mt-32">
@@ -37,7 +37,7 @@ const links = ["Teenused", "Galerii", "Kontakt", "Renditingimused"];
           links.map((link) => (
             <li>
               <a
-                href={`/autorent/${link.toLowerCase()}`}
+                href={`/dekoratsioonid/${link.toLowerCase()}`}
                 class="hover:text-blue-500 transition-colors duration-300 text-steel-gray"
               >
                 {link.charAt(0).toUpperCase() + link.slice(1)}
@@ -69,10 +69,7 @@ const links = ["Teenused", "Galerii", "Kontakt", "Renditingimused"];
 
     <!-- Additional Info -->
     <div>
-      <h2 class="text-lg font-bold">Rent</h2>
-      <p class="text-steel-gray">
-        Ilusad ja uhked autod Teie eriliseks päevaks.
-      </p>
+      <h2 class="text-lg font-bold">Telli</h2>
       <p class="text-steel-gray">Ainulaadsed ja isikupärased dekoratsioonid.</p>
     </div>
   </div>

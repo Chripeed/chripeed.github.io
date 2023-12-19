@@ -35,7 +35,7 @@ export default function Navbar({
           <h1 className="text-2xl font-bold text-luxurious-gold ">
             <a
               className="hover:text-champagne-gold transition ease-out duration-500"
-              href="/"
+              href={`${currentHref}`}
             >
               WEDLUX
             </a>
@@ -62,7 +62,7 @@ export default function Navbar({
           <h1 className="text-2xl mx-8 font-bold text-luxurious-gold">
             <a
               className="hover:text-champagne-gold transition ease-out duration-500"
-              href="/"
+              href={`${currentHref}`}
             >
               WEDLUX
             </a>

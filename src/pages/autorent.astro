@@ -10,7 +10,7 @@ import bg2 from "/Galerii/Auto/galerii6.jpg?url";
   }
 
   .clip-path-reverse {
-    clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
   }
 
   @media (min-width: 768px) {
@@ -21,28 +21,28 @@ import bg2 from "/Galerii/Auto/galerii6.jpg?url";
 </style>
 
 <AutorentNavbar>
-  <div class="relative w-full overflow-hidden mt-4">
+  <div class="relative w-full mt-4">
+    <!-- Background Image Section -->
     <div
-      class="bg-cover bg-center bg-no-repeat h-[24rem] w-full relative flex items-center justify-center clip-path"
+      class="relative flex items-center justify-center h-[24rem] w-full bg-cover bg-center bg-no-repeat clip-path"
       style={{ backgroundImage: `url(${bg})` }}
     >
-      <div>
-        <h1
-          class="text-pure-white font-Florentino text-center font-bold text-4xl mx-4 my-4 mt-16"
-        >
-          Rendi luksuslik Mercedes-Benz
-        </h1>
-      </div>
+      <h1
+        class="mx-4 my-4 mt-16 text-4xl font-bold text-center text-pure-white font-Florentino"
+      >
+        Rendi luksuslik Mercedes-Benz
+      </h1>
     </div>
 
-    <div class="flex md:flex-row w-full md:h-[24rem]">
+    <!-- Main Content Section -->
+    <div class="flex flex-col w-full mt-4 md:flex-row">
       <!-- Text Content -->
-      <div class="flex-1 flex items-start md:justify-center p-8 mt-4">
-        <div class="font-Florentino text-onyx-black max-w-lg mx-auto md:mx-0">
-          <h2 class="font-bold text-2xl text-center md:text-left">
+      <div class="flex-1 p-8 mt-4 md:justify-center">
+        <div class="max-w-lg mx-auto font-SortsMillGoudy text-onyx-black">
+          <h2 class="text-2xl font-bold text-center md:text-left">
             Pulmaautode rentimine
           </h2>
-          <div class="mt-8 text-lg font-SortsMillGoudy max-w-lg">
+          <div class="mt-8 text-lg">
             <p class="mb-4">
               Meie WedLuxis teeme kõik endast oleneva, et muuta teie pulmad
               eksklusiivse pulmaauto rentimisega unustamatuks kogemuseks.
@@ -52,23 +52,21 @@ import bg2 from "/Galerii/Auto/galerii6.jpg?url";
               teeme teile, kui oleme pulmasõiduga seotud üksikasjad läbi
               arutanud.
             </p>
-            <p>
+            <p class="mb-12">
               Lähemalt tutvuge meie <a
                 href="/autorent/hinnakiri"
-                class="text-deep-black font-black">hinnakirjaga</a
+                class="font-black text-deep-black">hinnakirjaga</a
               > ja võtke meiega <a
                 href="/autorent/kontakt"
-                class="text-deep-black
-              font-black">ühendust</a
+                class="font-black text-deep-black">ühendust</a
               >.
             </p>
           </div>
         </div>
       </div>
-
-      <!-- Image -->
+      <!-- Image Section for Mobile View -->
       <div
-        class="flex-1 bg-cover bg-center bg-no-repeat clip-path-reverse"
+        class="bg-cover bg-center bg-no-repeat clip-path-reverse w-full h-[24rem] md:flex-1"
         style={{ backgroundImage: `url(${bg2})` }}
       >
       </div>

@@ -1,7 +1,120 @@
 ---
 import MainLayoutNavbar from "../../layouts/navbar_autorent_layout.astro";
+import car1 from "/Galerii/Auto/galerii2.jpg?url";
+import car2 from "/Galerii/Auto/galerii3.jpg?url";
+import { RiMoneyEuroCircleLine } from "react-icons/ri";
+import { FaPeopleGroup } from "react-icons/fa6";
+import { GiMartini } from "react-icons/gi";
 ---
 
 <MainLayoutNavbar>
-  <p>Hinnakirja leht!</p>
+  <div class="flex items-center justify-center mx-12 mt-12">
+    <hr class="flex-1 h-1 bg-charcoal-gray border-0 rounded my-4 md:my-2" />
+    <h1 class="mx-4 font-Florentino font-bold text-center text-3xl">
+      HINNAKIRI
+    </h1>
+    <hr class="flex-1 h-1 bg-charcoal-gray border-0 rounded my-4 md:my-2" />
+  </div>
+
+  <div class="flex flex-col md:flex-row">
+    <!-- S KLASS AUTO -->
+    <div
+      class="flex flex-col md:flex-row items-center bg-black text-white w-full"
+    >
+      <!-- Image Element -->
+      <div
+        class="md:w-1/2 w-full flex justify-center items-center px-4 md:justify-end md:px-0"
+      >
+        <img
+          src={car1}
+          alt="S-klassi Mercedes-Benz"
+          class="w-3/4 max-w-lg h-auto object-contain rounded-2xl md:w-auto md:h-[20em]"
+        />
+      </div>
+
+      <!-- Right side with text -->
+      <div
+        class="md:w-1/2 w-full flex flex-col justify-center items-center md:items-start text-center md:text-left p-4 md:p-12"
+      >
+        <h2 class="text-2xl mb-2 font-bold">S-klassi Mercedes-Benz</h2>
+        <ul class="list-none space-y-2 text-left mt-2">
+          <li class="flex flex-col space-y-1">
+            <div class="flex items-center space-x-2">
+              <RiMoneyEuroCircleLine class="text-lg" />
+              <span class="font-medium">Alates 50€/h</span>
+            </div>
+            <p class="text-sm pl-[calc(1em+8px)]">Piiramatu kilometraaž</p>
+          </li>
+          <li class="flex flex-col space-y-1">
+            <div class="flex items-center space-x-2">
+              <FaPeopleGroup class="text-lg" />
+              <span class="font-medium">3+1 reisijat</span>
+            </div>
+            <p class="text-sm pl-[calc(1em+8px)]">
+              Mahutab lahedalt nii pruutpaari kui ka fotograafi
+            </p>
+          </li>
+          <li class="flex flex-col space-y-1">
+            <div class="flex items-center space-x-2">
+              <GiMartini class="text-lg" />
+              <span class="font-medium">Kujunda vastavalt oma maitsele</span>
+            </div>
+            <p class="text-sm pl-[calc(1em+8px)]">
+              Võimalik auto disain, külm shampanja, spetsiaalne muusika
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- V KLASS AUTO -->
+    <div
+      class="flex flex-col md:flex-row items-center bg-black text-white w-full mt-8"
+    >
+      <!-- Image Element -->
+      <div
+        class="md:w-1/2 w-full flex justify-center items-center px-4 md:justify-end md:px-0"
+      >
+        <img
+          src={car2}
+          alt="V-klassi Mercedes-Benz"
+          class="w-3/4 max-w-lg h-auto object-contain rounded-2xl md:w-auto md:h-[20em]"
+        />
+      </div>
+
+      <!-- Right side with text -->
+      <div
+        class="md:w-1/2 w-full flex flex-col justify-center items-center md:items-start text-center md:text-left p-4 md:p-12"
+      >
+        <h2 class="text-2xl mb-2 font-bold">V-klassi Mercedes-Benz</h2>
+        <ul class="list-none space-y-2 text-left mt-2">
+          <li class="flex flex-col space-y-1">
+            <div class="flex items-center space-x-2">
+              <RiMoneyEuroCircleLine class="text-lg" />
+              <span class="font-medium">Alates 75€/h</span>
+            </div>
+            <p class="text-sm pl-[calc(1em+8px)]">Piiramatu kilometraaž</p>
+          </li>
+          <li class="flex flex-col space-y-1">
+            <div class="flex items-center space-x-2">
+              <FaPeopleGroup class="text-lg" />
+              <span class="font-medium">6+1 reisijat</span>
+            </div>
+            <p class="text-sm pl-[calc(1em+8px)]">
+              Mahutab nii pruutpaari, perekonda kui ka fotograafi
+            </p>
+          </li>
+          <li class="flex flex-col space-y-1">
+            <div class="flex items-center space-x-2">
+              <GiMartini class="text-lg" />
+              <span class="font-medium">Kujunda vastavalt oma maitsele</span>
+            </div>
+            <p class="text-sm pl-[calc(1em+8px)]">
+              Võimalik auto disain, külm shampanja, spetsiaalne muusika
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </MainLayoutNavbar>
