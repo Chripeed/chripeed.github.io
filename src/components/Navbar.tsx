@@ -5,6 +5,7 @@ export default function Navbar({
   switchToText = "AUTORENT",
   switchToHref = "/autorent",
   currentHref = "/autorent",
+  page = "HINNAKIRI",
 }) {
   const [toggled, setToggled] = useState(false);
   /*const [isMounted, setIsMounted] = useState(false);*/
@@ -27,9 +28,9 @@ export default function Navbar({
           </a>
           <a
             className="hover:text-steel-gray transition ease-out duration-500"
-            href={`${currentHref}/hinnakiri`}
+            href={`${currentHref}/${page.toLowerCase()}`}
           >
-            HINNAKIRI
+            {page}
           </a>
 
           <h1 className="text-2xl font-bold text-luxurious-gold ">
@@ -100,7 +101,7 @@ export default function Navbar({
           <div className="flex flex-col gap-12 text-lg text-metallic-silver text-center font-Florentino">
             {[
               `${switchToHref}`,
-              `${currentHref}/hinnakiri`,
+              `${currentHref}/${page.toLowerCase()}`,
               `${currentHref}/galerii`,
               `${currentHref}/kontakt`,
             ].map((link, index) => (
