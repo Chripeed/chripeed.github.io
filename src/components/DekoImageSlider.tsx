@@ -66,7 +66,7 @@ function ImageSlider() {
     if (!image) return null;
 
     return (
-      <div className="fixed inset-0 bg-deep-black bg-opacity-90 flex items-center justify-center z-50">
+      <div className="fixed inset-0 bg-deep-black bg-opacity-90 flex items-center justify-center z-50 ">
         {/* Overlay with semi-transparent black background */}
         <div className="absolute inset-0 bg-black bg-opacity-75"></div>
 
@@ -89,7 +89,7 @@ function ImageSlider() {
   };
 
   return (
-    <div className="h-[400px] md:h-[700px] md:max-w-[1200px] w-full m-auto py-2 px-4 relative group mt-8">
+    <div className="h-[400px] md:h-[700px] md:max-w-[1200px] w-full m-auto py-2 px-4 relative group mt-8 mb-28">
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
         className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
