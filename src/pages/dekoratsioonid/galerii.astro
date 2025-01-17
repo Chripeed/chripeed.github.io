@@ -1,0 +1,29 @@
+---
+import DekoratsioonidNavbarLayout from "../../layouts/DekoratsioonidNavbarLayout.astro";
+import ImageSlider from "../../components/ImageSlider"
+
+import deko1 from "../../assets/Galerii/Dekoratsioonid/deko1.jpg"
+import deko2 from "../../assets/Galerii/Dekoratsioonid/deko2.jpg"
+import deko3 from "../../assets/Galerii/Dekoratsioonid/deko3.jpg"
+import deko4 from "../../assets/Galerii/Dekoratsioonid/deko4.jpg"
+import deko5 from "../../assets/Galerii/Dekoratsioonid/deko5.jpg"
+
+
+
+const slides = [
+  { url: deko1.src },
+  { url: deko2.src },
+  { url: deko3.src },
+  { url: deko4.src },
+  { url: deko5.src }
+];
+---
+
+<DekoratsioonidNavbarLayout>
+    <div class="flex items-center justify-center mx-12 mt-12">
+        <hr class="flex-1 h-1 bg-charcoal-gray border-0 rounded my-4 md:my-2" />
+        <h1 class="mx-4 font-Florentino font-bold text-center text-3xl">GALERII</h1>
+        <hr class="flex-1 h-1 bg-charcoal-gray border-0 rounded my-4 md:my-2" />
+      </div>
+      <ImageSlider slides={slides} client:load />
+</DekoratsioonidNavbarLayout>

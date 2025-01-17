@@ -1,0 +1,66 @@
+---
+
+import car1 from "./../../assets/Galerii/Auto/galerii2.jpg"
+import car2 from "./../../assets/Galerii/Auto/galerii3.jpg"
+import { RiMoneyEuroCircleLine } from "react-icons/ri";
+import { FaPeopleGroup } from "react-icons/fa6";
+import { GiMartini } from "react-icons/gi";
+import AutorentNavbarLayout from "../../layouts/AutorentNavbarLayout.astro";
+---
+
+<AutorentNavbarLayout>
+  <div class="flex items-center justify-center mx-12 mt-12">
+    <hr class="flex-1 h-1 bg-charcoal-gray border-0 rounded my-4 md:my-2" />
+    <h1 class="mx-4 font-Florentino font-bold text-center text-3xl">
+      HINNAKIRI
+    </h1>
+    <hr class="flex-1 h-1 bg-charcoal-gray border-0 rounded my-4 md:my-2" />
+  </div>
+
+  <div class="text-center font-SortsMillGoudy mt-2 mb-4">
+    <p>
+        Tutvuge lähemalt <a href="/autorent/renditingimused" class="font-bold"
+        >renditingimustega</a
+        >
+    </p>
+  </div>
+
+  <div class="flex flex-col lg:flex-row justify-center items-center md:mt-16">
+    <!-- First Car Image -->
+    <div class="p-2 mx-4">
+      <img src={car1.src} alt="s-klass" class="md:h-[400px] md:w-auto object-contain rounded-2xl"/>
+    </div>
+  
+    <!-- First Car Info -->
+    <div class="p-2 text-left space-y-4 mb-12">
+      <h2 class="text-2xl font-bold text-center">S-klassi Mercedes-Benz</h2>
+      <ul class="space-y-2" >
+        <li class="flex items-center space-x-2"><RiMoneyEuroCircleLine/><span>Alates 50€/h</span></li>
+        <span class="text-sm">Piiramatu kilometraaž</span>
+        <li class="flex items-center space-x-2"><FaPeopleGroup/>3 + 1 reisijat</li>
+        <span class="text-sm">Mahutab lahedalt nii pruutpaari kui ka fotograafi</span>
+        <li class="flex items-center space-x-2"><GiMartini/>Kujunda vastavalt oma maitsele</li>
+        <span class="text-sm">Võimalik auto disain, külm šampanja, spetsiaalne muusika</span>
+      </ul>
+    </div>
+  
+    <!-- Second Car Image -->
+    <div class="p-2 mx-4">
+      <img src={car2.src} alt="v-klass" class="md:h-[400px] md:w-auto object-contain rounded-2xl"/>
+    </div>
+  
+    <!-- Second Car Info -->
+    <div class="p-2 text-left space-y-4 mb-12">
+      <h2 class="text-2xl font-bold text-center">V-klassi Mercedes-Benz</h2>
+      <ul class="space-y-2" >
+        <li class="flex items-center space-x-2"><RiMoneyEuroCircleLine/><span>Alates 75€/h</span></li>
+        <span class="text-sm">Piiramatu kilometraaž</span>
+        <li class="flex items-center space-x-2"><FaPeopleGroup/><span>6 + 1 reisijat</span></li>
+        <span class="text-sm">Mahutab nii pruutpaari, perekonda kui ka fotograafi</span>
+        <li class="flex items-center space-x-2"><GiMartini/><span>Kujunda vastavalt oma maitsele</span></li>
+        <span class="text-sm">Võimalik auto disain, külm šampanja, spetsiaalne muusika</span>
+      </ul>
+    </div>
+  </div>
+ 
+</AutorentNavbarLayout>

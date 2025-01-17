@@ -1,0 +1,69 @@
+---
+import DekoratsioonidNavbarLayout from "../../layouts/DekoratsioonidNavbarLayout.astro";
+import deko1 from "./../../assets/Galerii/Dekoratsioonid/deko3.jpg"
+import deko2 from "./../../assets/Galerii/Dekoratsioonid/deko4.jpg"
+import deko3 from "./../../assets/Galerii/Dekoratsioonid/deko5.jpg"
+---
+
+<DekoratsioonidNavbarLayout>
+    <div class="flex items-center justify-center mx-12 mt-12">
+        <hr class="flex-1 h-1 bg-charcoal-gray border-0 rounded my-4 md:my-2" />
+        <h1 class="mx-4 font-Florentino font-bold text-center text-3xl">
+          TEENUSED
+        </h1>
+        <hr class="flex-1 h-1 bg-charcoal-gray border-0 rounded my-4 md:my-2" />
+      </div>
+    
+      <!-- Centralized Content Container -->
+      <div class="max-w-4xl mx-auto px-4 font-SortsMillGoudy font-medium mb-12">
+        <!-- Image and Text Pair 1 -->
+        <div class="flex flex-col md:flex-row items-center mt-8">
+          <p class="w-full md:w-1/2 p-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et nisi
+            est. Donec auctor, tortor at imperdiet ullamcorper, nulla nisl cursus
+            lectus, eget pulvinar odio libero at ante. Fusce placerat, magna eu
+            imperdiet tincidunt, lectus metus tempor lacus, eget volutpat sapien ex
+            vel arcu. Morbi lobortis, lorem eget scelerisque ultrices, magna nunc
+            sagittis nunc, elementum dapibus ante massa tempus lacus. Proin sit amet
+            quam egestas, accumsan turpis in, dapibus felis. Aliquam luctus urna
+            sapien, ac venenatis nibh accumsan in. Aliquam luctus auctor vulputate.
+          </p>
+          <img
+            src={deko1.src}
+            alt="Decoration 1"
+            class="w-full md:w-1/2 h-64 object-cover rounded-lg"
+          />
+        </div>
+    
+        <!-- Image and Text Pair 2 -->
+        <div class="flex flex-col md:flex-row items-center mt-8">
+          <img
+            src={deko2.src}
+            alt="Decoration 2"
+            class="w-full md:w-1/2 h-64 object-cover rounded-lg"
+          />
+          <p class="w-full md:w-1/2 p-4">
+            Praesent ut orci ultrices, tincidunt ipsum non, vestibulum libero.
+            Integer aliquam lorem rutrum fermentum volutpat. Aliquam malesuada
+            lacinia neque aliquam molestie. Nam quis pellentesque felis. Proin
+            scelerisque semper interdum. Fusce laoreet molestie consectetur. Sed
+            auctor erat at sapien ornare porta.
+          </p>
+        </div>
+    
+        <!-- Image and Text Pair 3 -->
+        <div class="flex flex-col md:flex-row items-center mt-8">
+          <p class="w-full md:w-1/2 p-4">
+            Orci varius natoque penatibus et magnis dis parturient montes, nascetur
+            ridiculus mus. Aliquam erat volutpat. Sed at consectetur urna. Nunc
+            vulputate a urna in pharetra. Donec molestie nisl ac ipsum tempor, quis
+            egestas nibh ornare. Vivamus non elementum metus, id porttitor tellus.
+          </p>
+          <img
+            src={deko3.src}
+            alt="Decoration 3"
+            class="w-full md:w-1/2 h-64 object-cover rounded-lg"
+          />
+        </div>
+      </div>
+</DekoratsioonidNavbarLayout>

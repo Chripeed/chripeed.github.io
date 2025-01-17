@@ -1,0 +1,68 @@
+---
+import bg from "../assets/Galerii/Auto/galerii4.jpg"
+import bg2 from "../assets/Galerii/Auto/galerii6.jpg"
+import AutorentNavbarLayout from "../layouts/AutorentNavbarLayout.astro";
+---
+
+<style>
+  .clip-path {
+    clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
+  }
+
+  .clip-path-reverse {
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  @media (min-width: 768px) {
+    .clip-path-reverse {
+      clip-path: polygon(0 7.5%, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+</style>
+
+<AutorentNavbarLayout>
+  <div class="mt-4">
+    <div class="relative">
+        <img class="clip-path max-h-[24rem] w-full object-cover" src={bg.src} alt="taust"/>
+        <h1 class="absolute text-4xl text-pure-white font-bold font-Florentino top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2">Rendi luksuslik Mercedes-Benz</h1>
+    </div>
+    <div class="flex flex-col w-full mt-4 md:flex-row">
+        <!-- Text Content -->
+        <div class="flex flex-col w-full mt-4 md:flex-row">
+            <!-- Text Content -->
+            <div class="flex-1 p-8 mt-4 md:justify-center">
+              <div class="max-w-lg mx-auto font-SortsMillGoudy text-onyx-black">
+                <h2 class="text-2xl font-bold text-center md:text-left">
+                  Pulmaautode rentimine
+                </h2>
+                <div class="mt-8 text-lg">
+                  <p class="mb-4">
+                    Meie WedLuxis teeme kõik endast oleneva, et muuta teie pulmad
+                    eksklusiivse pulmaauto rentimisega unustamatuks kogemuseks.
+                  </p>
+                  <p class="mb-4">
+                    Pakume oma teenuseid terve Eesti piires ja täpse hinnapakkumise
+                    teeme teile, kui oleme pulmasõiduga seotud üksikasjad läbi
+                    arutanud.
+                  </p>
+                  <p class="mb-12">
+                    Lähemalt tutvuge meie <a
+                      href="/autorent/hinnakiri"
+                      class="font-black text-deep-black">hinnakirjaga</a
+                    > ja võtke meiega <a
+                      href="/kontakt"
+                      class="font-black text-deep-black">ühendust</a
+                    >.
+                  </p>
+                </div>
+              </div>
+            </div>
+        <!-- Image Section for Mobile View -->
+        <img
+          class="object-cover object-center bg-no-repeat clip-path-reverse w-full h-[24rem] md:flex-1"
+          src={bg2.src} alt="bg2"
+        />
+        
+    </div>
+  </div>
+</NavbarLayout>

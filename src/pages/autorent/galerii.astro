@@ -1,0 +1,28 @@
+---
+import AutorentNavbarLayout from "../../layouts/AutorentNavbarLayout.astro";
+import ImageSlider from "../../components/ImageSlider"
+
+import car1 from "../../assets/Galerii/Auto/galerii1.jpg"
+import car2 from "../../assets/Galerii/Auto/galerii2.jpg"
+import car3 from "../../assets/Galerii/Auto/galerii3.jpg"
+import car4 from "../../assets/Galerii/Auto/galerii4.jpg"
+import car5 from "../../assets/Galerii/Auto/galerii5.jpg"
+import car6 from "../../assets/Galerii/Auto/galerii6.jpg"
+
+const slides = [
+  { url: car1.src },
+  { url: car2.src },
+  { url: car3.src },
+  { url: car4.src },
+  { url: car5.src }
+];
+---
+
+<AutorentNavbarLayout>
+    <div class="flex items-center justify-center mx-12 mt-12">
+        <hr class="flex-1 h-1 bg-charcoal-gray border-0 rounded my-4 md:my-2" />
+        <h1 class="mx-4 font-Florentino font-bold text-center text-3xl">GALERII</h1>
+        <hr class="flex-1 h-1 bg-charcoal-gray border-0 rounded my-4 md:my-2" />
+      </div>
+      <ImageSlider slides={slides} client:load />
+</AutorentNavbarLayout>

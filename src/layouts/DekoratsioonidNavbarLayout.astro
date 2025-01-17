@@ -1,0 +1,27 @@
+---
+import { DekoratsioonNavbar } from "../components/DekoratsioonNavbar";
+import { DekoratsioonFooter } from "../components/DekoratsioonFooter";
+import { companyInfo } from "../assets/FooterData";
+import { dekoLinks } from "../assets/FooterData";
+const {pathname} = Astro.url
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="stylesheet" href="/styles/fonts.css" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro Basics</title>
+	</head>
+	<body class="min-h-screen flex flex-col bg-soft-white">
+        <DekoratsioonNavbar client:load/>
+        <main class="flex-1">
+            <slot />
+        </main>
+        <DekoratsioonFooter companyInfo={companyInfo} links={dekoLinks}/>
+	</body>
+</html>
+

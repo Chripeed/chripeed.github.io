@@ -1,0 +1,26 @@
+---
+import {AutorentNavbar} from "./../components/AutorentNavbar"
+import {AutorentFooter} from "./../components/AutorentFooter"
+import { companyInfo } from "../assets/FooterData";
+import { links } from "../assets/FooterData";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="stylesheet" href="/styles/fonts.css" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro Basics</title>
+	</head>
+	<body class="min-h-screen flex flex-col bg-soft-white">
+        <AutorentNavbar client:load/>
+        <main class="flex-1">
+            <slot />
+        </main>
+        <AutorentFooter companyInfo={companyInfo} links={links}/>
+	</body>
+</html>
+
