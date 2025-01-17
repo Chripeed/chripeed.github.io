@@ -9,7 +9,7 @@ import node from "@astrojs/node";
 // https://astro.build/config
 export default defineConfig({
   site: "https://chripeed.github.io",
-  output: "server", // or 'static' if you only want certain pages on-demand
+  output: "static", // or 'static' if you only want certain pages on-demand
   adapter: node({
     mode: "standalone",
   }),
