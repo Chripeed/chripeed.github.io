@@ -3,33 +3,6 @@ import React, { useState } from "react";
 const ContactForm: React.FC = () => {
   const [isSuccess, setIsSuccess] = useState(false);
 
-  // async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-  //   event.preventDefault();
-  //   setIsSuccess(false); // Hide success message before new submission
-
-  //   // Convert form to FormData
-  //   const form = event.currentTarget;
-  //   const formData = new FormData(form);
-
-  //   try {
-  //     const response = await fetch("/api/actions/send-email", {
-  //       method: "POST",
-  //       body: formData,
-  //     });
-
-  //     if (!response.ok) {
-  //       throw new Error("Server responded with an error");
-  //     }
-
-  //     // If successful, show success message & reset the form
-  //     setIsSuccess(true);
-  //     form.reset();
-  //   } catch (error) {
-  //     console.error("Error submitting form:", error);
-  //     alert("Vabandust, midagi läks valesti. Proovi hiljem uuesti.");
-  //   }
-  // }
-
   return (
     <div className="bg-medium-white p-8 shadow rounded-lg">
       <h2 className="text-2xl font-bold text-center py-4">
