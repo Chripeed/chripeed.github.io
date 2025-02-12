@@ -1,4 +1,5 @@
 import { useState } from "react";
+import tekst from "../assets/tekst.json";
 
 export const AutorentNavbar = () => {
   const [toggled, setToggled] = useState(false);
@@ -9,14 +10,14 @@ export const AutorentNavbar = () => {
           href="/dekoratsioonid"
           className="hover:text-steel-gray transition ease-out duration-500"
         >
-          DEKORATSIOONID
+          {tekst.Dekoratsioonid_tekst.toUpperCase()}
         </a>
 
         <a
           href="/autorent/hinnakiri"
           className="hover:text-steel-gray transition ease-out duration-500"
         >
-          HINNAKIRI
+          {tekst.Hinnakiri_tekst.toUpperCase()}
         </a>
 
         <h1 className="text-2xl font-bold text-luxurious-gold">
@@ -24,7 +25,7 @@ export const AutorentNavbar = () => {
             href="/autorent"
             className="hover:text-champagne-gold transition ease-out duration-500"
           >
-            WEDLUX
+            {tekst.Firmanimi.toUpperCase()}
           </a>
         </h1>
 
@@ -32,19 +33,21 @@ export const AutorentNavbar = () => {
           href="/autorent/galerii"
           className="hover:text-steel-gray transition ease-out duration-500"
         >
-          GALERII
+          {tekst.Galerii_tekst.toUpperCase()}
         </a>
 
         <a
           href="/autorent/kontakt"
           className="hover:text-steel-gray transition ease-out duration-500"
         >
-          KONTAKT
+          {tekst.Kontakt_tekst.toUpperCase()}
         </a>
       </div>
       <div className="md:hidden flex justify-between items-center">
         <a href="/autorent">
-          <h1 className="text-2xl font-bold text-luxurious-gold">WEDLUX</h1>
+          <h1 className="text-2xl font-bold text-luxurious-gold">
+            {tekst.Firmanimi.toUpperCase()}
+          </h1>
         </a>
         <button
           onClick={() => setToggled(!toggled)}

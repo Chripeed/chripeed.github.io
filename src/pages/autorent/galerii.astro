@@ -1,6 +1,7 @@
 ---
 import AutorentNavbarLayout from "../../layouts/AutorentNavbarLayout.astro";
 import ImageSlider from "../../components/ImageSlider"
+import tekst from "../../assets/tekst.json"
 
 import car1 from "../../assets/Galerii/Auto/galerii1.jpg"
 import car2 from "../../assets/Galerii/Auto/galerii2.jpg"
@@ -22,7 +23,7 @@ const slides = [
 <AutorentNavbarLayout>
     <div class="flex items-center justify-center mx-12 mt-12">
         <hr class="flex-1 h-1 bg-charcoal-gray border-0 rounded my-4 md:my-2" />
-        <h1 class="mx-4 font-Florentino font-bold text-center text-3xl">GALERII</h1>
+        <h1 class="mx-4 font-Florentino font-bold text-center text-3xl">{tekst.Galerii_tekst.toUpperCase()}</h1>
         <hr class="flex-1 h-1 bg-charcoal-gray border-0 rounded my-4 md:my-2" />
       </div>
       <ImageSlider slides={slides} client:load />

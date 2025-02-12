@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import tekst from "../assets/tekst.json";
 
 const ContactForm: React.FC = () => {
   // State for showing a message after submission.
   const [resultMessage, setResultMessage] = useState<string | null>(null);
   const [isError, setIsError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -23,8 +25,8 @@ const ContactForm: React.FC = () => {
     const data = Object.fromEntries(formData.entries());
     const json = JSON.stringify(data);
 
-    // Optionally display a "Sending..." message
-    setResultMessage("Sending...");
+    setIsLoading(true);
+    setResultMessage(null);
     setIsError(false);
 
     try {
@@ -39,17 +41,22 @@ const ContactForm: React.FC = () => {
       });
       const result = await response.json();
       if (response.ok) {
-        setResultMessage(result.message);
+        // If successful, show a green success message.
+        setResultMessage("Email edukalt saadetud!");
         setIsError(false);
       } else {
+        // If the API returns an error, show a red error message.
         console.error(result);
-        setResultMessage(result.message);
+        setResultMessage("Miskit läks valesti!");
         setIsError(true);
       }
     } catch (error) {
       console.error(error);
-      setResultMessage("Something went wrong!");
+      setResultMessage("Miskit läks valesti!");
       setIsError(true);
+    } finally {
+      // End the loading state regardless of the result.
+      setIsLoading(false);
     }
 
     // Reset the form
@@ -64,15 +71,16 @@ const ContactForm: React.FC = () => {
   return (
     <div className="bg-medium-white p-8 shadow rounded-lg">
       <h2 className="text-2xl font-bold text-center py-4">
-        Võta meiega ühendust
+        {tekst.Kontakt_vormi_pealkiri}
       </h2>
       <form onSubmit={handleSubmit} className="space-y-4" noValidate>
         {/* Hidden fields required by Web3Forms */}
         <input
           type="hidden"
           name="access_key"
-          value="1d842936-4485-4139-aab4-31f92ed39222"
+          value="5826976a-a197-4c39-85ee-8c5c579b6793"
         />
+
         <input
           type="checkbox"
           name="botcheck"
@@ -85,7 +93,10 @@ const ContactForm: React.FC = () => {
             htmlFor="name"
             className="block text-sm font-medium text-onyx-black"
           >
-            Nimi
+            {tekst.Nimi_tekst}
+            <span>
+              <strong className="text-error">*</strong>
+            </span>
           </label>
           <input
             type="text"
@@ -101,7 +112,7 @@ const ContactForm: React.FC = () => {
             htmlFor="phone"
             className="block text-sm font-medium text-onyx-black"
           >
-            Telefon
+            {tekst.Telefon_tekst}
           </label>
           <input
             type="tel"
@@ -116,7 +127,10 @@ const ContactForm: React.FC = () => {
             htmlFor="email"
             className="block text-sm font-medium text-onyx-black"
           >
-            E-posti aadress
+            {tekst.Emaili_tekst}
+            <span>
+              <strong className="text-error">*</strong>
+            </span>
           </label>
           <input
             type="email"
@@ -132,7 +146,10 @@ const ContactForm: React.FC = () => {
             htmlFor="subject"
             className="block text-sm font-medium text-onyx-black"
           >
-            Teema
+            {tekst.Teema_tekst}
+            <span>
+              <strong className="text-error">*</strong>
+            </span>
           </label>
           <input
             type="text"
@@ -148,7 +165,10 @@ const ContactForm: React.FC = () => {
             htmlFor="message"
             className="block text-sm font-medium text-onyx-black"
           >
-            Teade
+            {tekst.Teade_tekst}
+            <span>
+              <strong className="text-error">*</strong>
+            </span>
           </label>
           <textarea
             id="message"
@@ -159,11 +179,11 @@ const ContactForm: React.FC = () => {
           />
         </div>
 
-        {/* Show result message */}
+        {/* Show result message if available */}
         {resultMessage && (
           <div
             className={`m-4 p-2 text-center font-bold ${
-              isError ? "text-red-500" : "text-green-500"
+              isError ? "text-error" : "text-success"
             }`}
           >
             {resultMessage}
@@ -173,9 +193,34 @@ const ContactForm: React.FC = () => {
         <div>
           <button
             type="submit"
+            disabled={isLoading}
             className="inline-flex justify-center w-full px-4 py-2 text-pure-white bg-charcoal-gray rounded-md hover:bg-onyx-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"
           >
-            Saada
+            {/* If loading, display a spinner SVG instead of the usual text */}
+            {isLoading ? (
+              <svg
+                className="animate-spin h-5 w-5"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8v8H4z"
+                ></path>
+              </svg>
+            ) : (
+              tekst.Saada_tekst
+            )}
           </button>
         </div>
       </form>

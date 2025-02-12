@@ -1,6 +1,7 @@
 ---
 import autoImage from '../assets/auto_sisu.jpg'
 import dekoratsioonImage from '../assets/ruum.jpg'
+import tekst from "../assets/tekst.json"
 ---
 
 <div
@@ -19,7 +20,7 @@ import dekoratsioonImage from '../assets/ruum.jpg'
       class="absolute inset-0 bg-deep-black bg-opacity-0 group-hover:bg-opacity-50 transition duration-300"
     >
     </div>
-    <span class="z-10 text-gold text-2xl md:text-4xl relative">AUTORENT</span>
+    <span class="z-10 text-gold text-2xl md:text-4xl relative">{tekst.Autorent_tekst.toUpperCase()}</span>
   </a>
   <a
     href="/dekoratsioonid"
@@ -35,7 +36,7 @@ import dekoratsioonImage from '../assets/ruum.jpg'
     >
     </div>
     <span class="z-10 text-gold text-2xl md:text-4xl relative"
-      >DEKORATSIOONID</span
+      >{tekst.Dekoratsioonid_tekst.toUpperCase()}</span
     >
   </a>
 </div>

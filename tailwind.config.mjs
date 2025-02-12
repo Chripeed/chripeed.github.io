@@ -17,6 +17,7 @@ export default {
       "steel-gray": "#B0B0B0",
       "graphite-black": "#202020",
       success: "#4BB543",
+      error: "#ED0014",
       blue: "#1877F2",
       pink: "#E1306C",
       /*

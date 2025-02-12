@@ -1,4 +1,5 @@
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import tekst from "../assets/tekst.json";
 
 type TCompanyInfo = {
   name: string;
@@ -8,34 +9,29 @@ type TCompanyInfo = {
   phone: string;
 };
 
-interface footerProps {
+interface FooterProps {
   companyInfo: TCompanyInfo;
   links: string[];
 }
 
-export const DekoratsioonFooter = (props: footerProps) => {
+export const DekoratsioonFooter = (props: FooterProps) => {
   return (
-    <footer className="bg-charcoal-gray text-soft-white">
-      <div className="flex justify-start md:justify-center flex-wrap gap-8 p-4 m-2 w-1/2 md:w-full">
+    <footer className="bg-charcoal-gray text-soft-white flex flex-col">
+      {/* Top section: content blocks */}
+      <div className="flex justify-start md:justify-center flex-wrap gap-8 p-4 m-2 ">
         <div>
-          <h2 className="text-lg font-bold">{props.companyInfo.name}</h2>
-          <p className="text-steel-gray">
-            Registrikood: {props.companyInfo.registerNumber}
-          </p>
-          <p className="text-steel-gray">
-            Aadress: {props.companyInfo.address}
-          </p>
-          <p className="text-steel-gray">
-            E-posti aadress: {props.companyInfo.email}
-          </p>
-          <p className="text-steel-gray">Telefon: {props.companyInfo.phone}</p>
+          <h2 className="text-lg font-bold">{tekst.Footer_firmanimi}</h2>
+          <p className="text-steel-gray">{tekst.Footer_firma_registrikood}</p>
+          <p className="text-steel-gray">{tekst.Footer_firma_aadress}</p>
+          <p className="text-steel-gray">{tekst.Footer_firma_email}</p>
+          <p className="text-steel-gray">{tekst.Footer_firma_telefon}</p>
         </div>
 
         <div>
-          <h2 className="text-lg font-bold">INFO</h2>
+          <h2 className="text-lg font-bold">{tekst.Footer_info}</h2>
           <ul>
             {props.links.map((link) => (
-              <li>
+              <li key={link}>
                 <a
                   href={`/dekoratsioonid/${link.toLowerCase()}`}
                   className="hover:text-blue-500 transition-colors duration-300 text-steel-gray"
@@ -48,10 +44,10 @@ export const DekoratsioonFooter = (props: footerProps) => {
         </div>
 
         <div>
-          <h2 className="text-lg font-bold">Jälgi meid</h2>
+          <h2 className="text-lg font-bold">{tekst.Footer_jalgi_meid}</h2>
           <div className="flex mt-4">
             <a
-              href="https://www.facebook.com/people/WedLux/100093962121919/?locale=et_EE"
+              href="https://www.facebook.com/p/WeddLux-100093962121919/"
               className="text-blue hover:text-steel-gray transition-colors duration-300"
             >
               <FaFacebookF size="2em" />
@@ -66,11 +62,18 @@ export const DekoratsioonFooter = (props: footerProps) => {
         </div>
 
         <div>
-          <h2 className="text-lg font-bold">Rent</h2>
+          <h2 className="text-lg font-bold">
+            {tekst.Footer_dekoratsioonid_pealkiri}
+          </h2>
           <p className="text-steel-gray">
-            Ilusad ja uhked autod Teie eriliseks päevaks.
+            {tekst.Footer_dekoratsioonid_alamtekst}
           </p>
         </div>
+      </div>
+
+      {/* Bottom section: centered copyright */}
+      <div className="w-full text-center py-2 border-t border-steel-gray">
+        <p>© {new Date().getFullYear()} Weddlux. All rights reserved.</p>
       </div>
     </footer>
   );

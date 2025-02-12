@@ -6,6 +6,7 @@ import { RiMoneyEuroCircleLine } from "react-icons/ri";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { GiMartini } from "react-icons/gi";
 import AutorentNavbarLayout from "../../layouts/AutorentNavbarLayout.astro";
+import tekst from "../../assets/tekst.json"
 export const prerender = true;
 ---
 
@@ -13,16 +14,14 @@ export const prerender = true;
   <div class="flex items-center justify-center mx-12 mt-12">
     <hr class="flex-1 h-1 bg-charcoal-gray border-0 rounded my-4 md:my-2" />
     <h1 class="mx-4 font-Florentino font-bold text-center text-3xl">
-      HINNAKIRI
+      {tekst.Hinnakiri_tekst.toUpperCase()}
     </h1>
     <hr class="flex-1 h-1 bg-charcoal-gray border-0 rounded my-4 md:my-2" />
   </div>
 
   <div class="text-center font-SortsMillGoudy mt-2 mb-4">
-    <p>
-        Tutvuge lähemalt <a href="/autorent/renditingimused" class="font-bold"
-        >renditingimustega</a
-        >
+    <p set:html={tekst.Autorent_hinnakirja_renditingimused}>
+       
     </p>
   </div>
 
@@ -34,14 +33,14 @@ export const prerender = true;
   
     <!-- First Car Info -->
     <div class="p-2 text-left space-y-4 mb-12">
-      <h2 class="text-2xl font-bold text-center">S-klassi Mercedes-Benz</h2>
+      <h2 class="text-2xl font-bold text-center">{tekst.Autorent_hinnakirja_s_klassi_pealkiri}</h2>
       <ul class="space-y-2" >
-        <li class="flex items-center space-x-2"><RiMoneyEuroCircleLine/><span>Alates 50€/h</span></li>
-        <span class="text-sm">Piiramatu kilometraaž</span>
-        <li class="flex items-center space-x-2"><FaPeopleGroup/>3 + 1 reisijat</li>
-        <span class="text-sm">Mahutab lahedalt nii pruutpaari kui ka fotograafi</span>
-        <li class="flex items-center space-x-2"><GiMartini/>Kujunda vastavalt oma maitsele</li>
-        <span class="text-sm">Võimalik auto disain, külm šampanja, spetsiaalne muusika</span>
+        <li class="flex items-center space-x-2"><RiMoneyEuroCircleLine/><span>{tekst.Autorent_hinnakirja_s_klassi_hinna_tekst}</span></li>
+        <span class="text-sm">{tekst.Autorent_hinnakirja_s_klassi_hinna_alamtekst}</span>
+        <li class="flex items-center space-x-2"><FaPeopleGroup/>{tekst.Autorent_hinnakirja_s_klassi_mahutuvuse_tekst}</li>
+        <span class="text-sm">{tekst.Autorent_hinnakirja_s_klassi_mahutuvuse_alamtekst}</span>
+        <li class="flex items-center space-x-2"><GiMartini/>{tekst.Autorent_hinnakirja_s_klassi_kujunduse_tekst}</li>
+        <span class="text-sm">{tekst.Autorent_hinnakirja_s_klassi_kujunduse_alamtekst}</span>
       </ul>
     </div>
   
@@ -52,14 +51,14 @@ export const prerender = true;
   
     <!-- Second Car Info -->
     <div class="p-2 text-left space-y-4 mb-12">
-      <h2 class="text-2xl font-bold text-center">V-klassi Mercedes-Benz</h2>
+      <h2 class="text-2xl font-bold text-center">{tekst.Autorent_hinnakirja_v_klassi_pealkiri}</h2>
       <ul class="space-y-2" >
-        <li class="flex items-center space-x-2"><RiMoneyEuroCircleLine/><span>Alates 75€/h</span></li>
-        <span class="text-sm">Piiramatu kilometraaž</span>
-        <li class="flex items-center space-x-2"><FaPeopleGroup/><span>6 + 1 reisijat</span></li>
-        <span class="text-sm">Mahutab nii pruutpaari, perekonda kui ka fotograafi</span>
-        <li class="flex items-center space-x-2"><GiMartini/><span>Kujunda vastavalt oma maitsele</span></li>
-        <span class="text-sm">Võimalik auto disain, külm šampanja, spetsiaalne muusika</span>
+        <li class="flex items-center space-x-2"><RiMoneyEuroCircleLine/><span>{tekst.Autorent_hinnakirja_v_klassi_hinna_tekst}</span></li>
+        <span class="text-sm">{tekst.Autorent_hinnakirja_v_klassi_hinna_alamtekst}</span>
+        <li class="flex items-center space-x-2"><FaPeopleGroup/><span>{tekst.Autorent_hinnakirja_v_klassi_mahutuvuse_tekst}</span></li>
+        <span class="text-sm">{tekst.Autorent_hinnakirja_v_klassi_mahutuvuse_alamtekst}</span>
+        <li class="flex items-center space-x-2"><GiMartini/><span>{tekst.Autorent_hinnakirja_s_klassi_kujunduse_tekst}</span></li>
+        <span class="text-sm">{tekst.Autorent_hinnakirja_v_klassi_kujunduse_alamtekst}</span>
       </ul>
     </div>
   </div>

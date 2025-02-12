@@ -2,6 +2,7 @@
 import bg from "../assets/Galerii/Dekoratsioonid/deko1.jpg"
 import bg2 from "../assets/Galerii/Dekoratsioonid/deko2.jpg"
 import DekoratsioonidNavbarLayout from "../layouts/DekoratsioonidNavbarLayout.astro"
+import tekst from "../assets/tekst.json"
 export const prerender = true;
 ---
 
@@ -25,32 +26,24 @@ export const prerender = true;
   <div class="mt-4">
     <div class="relative">
         <img class="clip-path max-h-[24rem] w-full object-cover" src={bg.src} alt="taust"/>
-        <h1 class="absolute text-4xl text-pure-white font-bold font-Florentino top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2">Pulma dekoratsioonid</h1>
+        <h1 class="absolute text-4xl text-pure-white font-bold font-Florentino top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2">{tekst.Dekoratsioonid_esilehe_pealkiri}</h1>
     </div>
     <div class="flex flex-col w-full mt-4 md:flex-row">
-        <!-- Text Content -->
         <div class="flex flex-col w-full mt-4 md:flex-row">
-            <!-- Text Content -->
             <div class="flex-1 p-8 mt-4 md:justify-center">
               <div class="max-w-lg mx-auto font-SortsMillGoudy text-onyx-black">
                 <h2 class="text-2xl font-bold text-center md:text-left">
-                  Pulmade kujundamine
+                 {tekst.Dekoratsioonid_esilehe_alampealkiri}
                 </h2>
                 <div class="mt-8 text-lg">
                   <p class="mb-4">
-                    Selleks, et Teie pidupäev oleks eriline ja ilus, tuleb esmalt paika panna pulma stilistika. Optimaalne on see, kui kõik elemendid alates kutsetest kuni pulmatordini välja on tehtud ühes kujundus- ja värvistiilis. Sellisel juhul tekib terviklik harmooniline pilt imelisest sündmusest, mis jääb pikaks ajaks Teile ja Teie külalistele meelde. 
+                    {tekst.Dekoratsioonid_esilehe_esimene_loik}
                   </p>
                   <p class="mb-4">
-                    Valitud stilistika kajastub ka pulmadekoratsioonides (lilled, küünlad, komplimendid külalistele, paelad, tüll, pulma polügraafia ja pulma aksessuaarid). Pulma aksessuaarideks on kingilaegas, soovide raamat, sõrmuste padi, kingitused külalistele, noorpaari pokaalid, bonbonniere, sukapael, pulmakutsed. 
+                    {tekst.Dekoratsioonid_esilehe_teine_loik}
                   </p>
-                  <p class="mb-12">
-                    Lähemalt tutvuge meie <a
-                      href="/dekoratsioonid/teenused"
-                      class="font-black text-deep-black">teenustega</a
-                    > ja võtke meiega <a
-                      href="dekoratsioonid/kontakt"
-                      class="font-black text-deep-black">ühendust</a
-                    >.
+                  <p class="mb-12" set:html={tekst.Dekoratsioonid_esilehe_kolmas_loik}>
+                    
                   </p>
                 </div>
               </div>
